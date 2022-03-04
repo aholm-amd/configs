@@ -13,7 +13,7 @@ compinit
 # End of lines added by compinstall
 
 # Prompt setup
-PROMPT='%m %n %# %~ -> '
+PROMPT='%F{cyan}%m%f %F{033}%n%f %F{cyan}[%~]%f %(?.%F{046}->%f.%F{red}->%f) '
 
 # Shell colors setup
 zstyle ':completion:*:default' list-colors \
