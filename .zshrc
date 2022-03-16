@@ -18,3 +18,8 @@ PROMPT='%F{cyan}%m%f %F{033}%n%f %F{cyan}[%~]%f %(?.%F{046}->%f.%F{red}->%f) '
 # Shell colors setup
 zstyle ':completion:*:default' list-colors \
   ${(s.:.)LS_COLORS}
+
+# Aliases
+
+# Docker command line completion setup
+fpath=(~/.zsh/completion $fpath)
