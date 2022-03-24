@@ -6,5 +6,7 @@ set laststatus=2
 set number
 set ruler
 set tabstop=2
-set textwidth=80
+set t_vb=
+set visualbell
+"set textwidth=80
 syntax enable
