@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt autocd extendedglob nomatch
 unsetopt BEEP
 bindkey -v
@@ -12,6 +12,9 @@ zstyle :compinstall filename '/home/adamholm/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+# Configure cursor
+echo -ne '\e[5 q'
 
 # Prompt setup
 if [[ -n $(echo $STY) ]] {
@@ -41,6 +44,11 @@ fpath=(~/.zsh/completion $fpath)
 
 # Additions to $PATH
 path+=(~/.local/bin $path)
+
+# Adding Node binary install to path
+VERSION=v16.14.2
+DISTRO=linux-x64
+path+=(/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin $path)
 
 # On login, reattach to the newest detached Screen session, if there are
 # multiple detached sessions. Reattach to the detached session if there is
