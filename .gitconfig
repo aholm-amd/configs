@@ -1,0 +1,17 @@
+[user]
+	name = Adam Holm
+	email = adam.holm@amd.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
