@@ -8,7 +8,7 @@ set noro  " Default to not read-only in vimdiff
 set number
 set ruler
 set splitright " Open new split panes to right
-set tabstop=2
+set tabstop=4
 set t_vb=
 set visualbell
 "set textwidth=80

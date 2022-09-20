@@ -31,9 +31,11 @@ zstyle ':completion:*:default' list-colors \
   ${(s.:.)LS_COLORS}
 
 # Aliases
+#   for python and python related stuff
 alias python="python3"
+alias da="deactivate"
 
-# Aliases for Docker
+#   for Docker
 alias dkr-cls="docker container ls -a"
 alias dkr-ils="docker image ls"
 alias dkr-cp="docker container prune -f"
