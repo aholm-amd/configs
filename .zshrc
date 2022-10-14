@@ -31,6 +31,9 @@ zstyle ':completion:*:default' list-colors \
   ${(s.:.)LS_COLORS}
 
 # Aliases
+if [[ $(uname -n) = "AUS-LX-ADAMHOLM" ]] {
+  alias ssh-lab="ssh adamholm@10.216.168.173"
+}
 #   for python and python related stuff
 alias python="python3"
 alias da="deactivate"
@@ -52,6 +55,12 @@ VERSION=v16.14.2
 DISTRO=linux-x64
 path+=(/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin $path)
 
+# GNU Screen setup
+if [[ ! -d $HOME/.screen ]] {
+  mkdir $HOME/.screen
+  chmod 700 $HOME/.screen
+}
+export SCREENDIR=$HOME/.screen
 # On login, reattach to the newest detached Screen session, if there are
 # multiple detached sessions. Reattach to the detached session if there is
 # only one. Start a Screen session, if none are found.
