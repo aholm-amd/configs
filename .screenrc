@@ -112,6 +112,7 @@ defnonblock 5
 # screen -t mail 8 mutt
 # screen -t daemon 9 tail -f /var/log/daemon.log
 
+screen 4
 screen 3
 screen 2
 screen 1

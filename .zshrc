@@ -58,3 +58,5 @@ path+=(/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin $path)
 if [[ -z $STY ]] {
   screen -d -RR
 }
+
+eval "$(ssh-agent -s)"
